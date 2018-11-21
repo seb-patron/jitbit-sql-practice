@@ -7,7 +7,7 @@ A notebook filled with SQL query practice I've done from Jitbit's blog. Data and
 
 ## Getting Started
 
-Queries are called in Jupyter notebook and imported into pandas dataframes for visualization. Uses anaconda to manage the environment
+Queries are called in Jupyter notebook and imported into pandas dataframes for visualization. Uses anaconda to manage the environment.
 
 ### Requirements
 
@@ -30,17 +30,12 @@ Activate the environment:
 $ source activate sql-query-practice
 ```
 
-Next, run the get the data and sql table setup files.
+Next, run the get the create the database, tables, and insert data with the setup file.
 
 ```bash
-curl -O https://static.interviewcake.com/bakery_schema_and_data.sql && mysql.server start && mysql -u root
+psql -u postgres_username -f db_setup.sql
 ```
 
-Setup the database
-
-```bash
-source bakery_schema_and_data.sql;
-```
 
 Finally, start up Jupyter and visit localhost:8888 to see the analysis.
 
@@ -50,11 +45,7 @@ jupyter notebook
 
 ## Data Sources
 
-All data was taken from opendata sources.
-
-asu data - https://moto.data.socrata.com/dataset/Arizona-State-University-Police-Department/6fzp-yqnh
-
-tempe - https://data-tempegov.opendata.arcgis.com/datasets/02533928ed1649d2ac773c8ebf50f37d_1?geometry=-111.959%2C33.414%2C-111.899%2C33.426
+Faux data provided by [github user Plies](https://gist.github.com/Pluies/5663135) and there public gist.
 
 
 ### Additional Info
